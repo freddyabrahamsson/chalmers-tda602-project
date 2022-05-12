@@ -1,0 +1,5 @@
+{
+  "name": "eslint",
+  "srcDir": "lib",
+  "remote": "https://github.com/eslint/eslint.git"
+}

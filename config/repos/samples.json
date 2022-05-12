@@ -1,0 +1,5 @@
+{
+  "name": "sample",
+  "srcDir": "src",
+  "remote": "https://github.com/freddyabrahamsson/obf-samples.git"
+}

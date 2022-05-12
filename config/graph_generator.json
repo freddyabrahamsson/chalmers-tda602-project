@@ -1,0 +1,8 @@
+{
+  "repo": "commander",
+  "prop": "effort",
+  "profiles": [
+    "dead-code",
+    "dead-control"
+  ]
+}

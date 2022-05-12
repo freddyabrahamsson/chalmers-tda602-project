@@ -1,0 +1,5 @@
+{
+  "name": "commander",
+  "srcDir": "lib",
+  "remote": "https://github.com/tj/commander.js.git"
+}
