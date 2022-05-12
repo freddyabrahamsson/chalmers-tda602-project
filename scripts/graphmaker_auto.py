@@ -40,7 +40,7 @@ def read_data(config):
     return {"original": 1, "obf": complexities}
 
 
-def generate_graph(data, filename, prop_name):
+def generate_graph(data, filename, prop_name, output_dir):
     X = np.arange(len(data["obf"]))
     bar_width = 0.25
     plot_width = "\\textwidth"
@@ -62,16 +62,18 @@ def generate_graph(data, filename, prop_name):
     plt.xticks(X + bar_width / 2, profiles)
     plt.legend(loc="best")
 
-    tikzplotlib.save(f"{filename}.tex", axis_width=plot_width, axis_height=plot_height)
+    tikzplotlib.save(
+        f"{output_dir}/{filename}.tex", axis_width=plot_width, axis_height=plot_height
+    )
 
 
 if __name__ == "__main__":
     with open(argv[1]) as f:
         config = json.load(f)
-
+    output_dir = argv[2]
     repo_name = config["repo"]
     prop_name = config["prop"]
     data = read_data(config)
-    generate_graph(data, f"{prop_name}_{repo_name}", prop_name)
+    generate_graph(data, f"{prop_name}_{repo_name}", prop_name, output_dir)
 
     exit()
