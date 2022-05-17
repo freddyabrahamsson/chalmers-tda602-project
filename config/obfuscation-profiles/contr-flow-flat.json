@@ -26,7 +26,7 @@
   "reservedStrings": [],
   "seed": 0,
   "selfDefending": false,
-  "simplify": true,
+  "simplify": false,
   "sourceMap": false,
   "sourceMapBaseUrl": "",
   "sourceMapFileName": "",
